@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/hiring.css' %}">
+</head>
+
+<body onload="openNav()"> <!-- Call openNav() function when the page is loaded -->
+    <div class="topnavbar" onclick="openNav()">
+        <div class="topnavbar-icon">&#9776;</div>
+        
+    </div>
+    
+    <div class="Mainsidenav">
+        <header>
+            <div class="left-icons">
+                <div class="notification-icon">
+                    <img src="{% static 'images/notification.jpg' %}" alt="Notification Icon">
+                </div>
+                <div class="messaging-icon">
+                    <img src="{% static 'images/message.png' %}" alt="Messaging Icon">
+                </div>
+                <div class="News-icon">
+                    <img src="{% static 'images/news.png' %}" alt="Messaging Icon">
+                </div>
+                <div class="youtube-icon">
+                    <a href="#">
+                        <img src="{% static 'images/video.png' %}" alt="YouTube Icon">
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Data is taken from data base code 
+        <main id="main">
+    <h3 style="text-align: center;">Job Openings</h3>
+    <div class="job-container">
+        {% for job in job_list %}
+        <div class="job-title">{{ job.company }}</div>
+        <div class="job-details">
+            <div><strong>Company:</strong>{{ job.company }}</div>
+            <div><strong>Salary:</strong>{{ job.salary }}</div>
+            <div><strong>Description:</strong>{{ job.description }}</div>
+            <div><strong>Job Type:</strong>{{ job.job_type }}</div>
+            <a href="{{ job.apply_link }}" class="apply-btn">Apply Now</a>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+-->
+    <main id="main">
+        <h3 style="text-align: center;">Job Openings</h3>
+        <div class="job-container">
+            <div class="job-title">Software Engineer</div>
+            <div class="job-details">
+                <div><strong>Company:</strong>Infosys</div>
+                <div><strong>Salary:</strong>4-5 LPA</div>
+                <div><strong>Description:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem animi minus, ducimus praesentium obcaecati, at deserunt sapiente molestias reiciendis illum quas expedita iure sit corporis molestiae quo magni quos aliquam!</div>
+                <div><strong>Job Type:</strong>Full Time</div>
+                <a href="apply-link.html" class="apply-btn">Apply Now</a>
+
+            </div>
+
+
+        </div>
+    </main>
+
+    <!-- Side Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="{% url 'career' %}">Career</a>
+        <a href="{% url 'Learning' %}">Learning Path</a>
+        <a href="{% url 'contest' %}">Contest</a>
+        <a href="{% url 'hiring' %}">Hiring</a>
+        <a href="{% url 'Login' %}">Login</a>
+    </div>
+
+    <!-- Additional scripts or backend logic can be included as needed -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "200px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+</body>
+</html>
