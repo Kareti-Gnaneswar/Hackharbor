@@ -1,0 +1,106 @@
+.topnavbar {
+    background-color: #111;
+    color: #fff;
+    width: 100%; /* Set width to fill the entire width of the viewport */
+    position: fixed; /* Fixed position to keep it at the top */
+    top: 0; /* Position at the top of the viewport */
+    left: 0%;
+    z-index: 2; /* Ensure it appears above other elements */
+    display: flex; /* Display as flex container */
+     /* Distribute items evenly */
+    align-items: center; /* Align items vertically */
+    padding: 10px; /* Add padding for better appearance */
+    height: 20px;
+}
+
+
+.Mainsidenav {
+    height: 100%;
+    width: 50px; /* Width of the navbar */
+    position: fixed;
+    z-index: 2;
+    top: 40px;
+    left: 0;
+    background-color: #333; /* Background color of the navbar */
+    overflow-x: hidden;
+}
+
+.Mainsidenav header {
+    padding: 10px;
+}
+
+.Mainsidenav .left-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.Mainsidenav .left-icons div {
+    margin-bottom: 20px;
+}
+
+.Mainsidenav img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+}
+
+/* Style for the main content */
+#main {
+    margin-left: 100px; /* Adjust margin to accommodate the width of the navbar */
+    padding: 50px;
+    left: 20px;
+}
+
+/* Improved styling for main content */
+#main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#main p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#main h3 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Improved styling for side navigation */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    left: 40px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ccc;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #fff;
+    background-color: #222;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 20px;
+    color: #fff;
+}
