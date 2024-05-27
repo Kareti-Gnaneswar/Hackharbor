@@ -11,12 +11,17 @@
 <body onload="openNav()"> <!-- Call openNav() function when the page is loaded -->
     <div class="topnavbar" onclick="openNav()">
         <div class="topnavbar-icon">&#9776;</div>
-        
+        <div class="Home"><a href="{% url 'home' %}">Home</a></div>
+            <div><a href="{% url 'myteam' %}">My team</a></div>
     </div>
     
     <div class="Mainsidenav">
         <header>
             <div class="left-icons">
+                <div class="left-icons">
+                    <div class="home-icon">
+                        <a href="{% url 'home' %}"><img src="{% static 'images/home.jpg' %}" alt="Home icon"></a>
+                    </div>
                 <div class="notification-icon">
                     <img src="{% static 'images/notification.jpg' %}" alt="Notification Icon">
                 </div>
@@ -27,7 +32,7 @@
                     <img src="{% static 'images/news.png' %}" alt="Messaging Icon">
                 </div>
                 <div class="youtube-icon">
-                    <a href="#">
+                    <a href="{% url 'videos' %}">
                         <img src="{% static 'images/video.png' %}" alt="YouTube Icon">
                     </a>
                 </div>
@@ -83,5 +88,89 @@
             document.getElementById("main").style.marginLeft= "0";
         }
     </script>
+
+    <style>
+        .topnavbar {
+    background-color: #111;
+    color: #fff;
+    width: 100%; /* Set width to fill the entire width of the viewport */
+    position: fixed; /* Fixed position to keep it at the top */
+    top: 0; /* Position at the top of the viewport */
+    left: 0%;
+    z-index: 2; /* Ensure it appears above other elements */
+    display: flex; /* Display as flex container */
+     /* Distribute items evenly */
+    align-items: center; /* Align items vertically */
+    padding: 10px; /* Add padding for better appearance */
+    height: 20px;
+}
+.Mainsidenav {
+    height: 100%;
+    width: 50px; /* Width of the navbar */
+    position: fixed;
+    z-index: 2;
+    top: 40px;
+    left: 0;
+    background-color: #333; /* Background color of the navbar */
+    overflow-x: hidden;
+}
+
+.Mainsidenav header {
+    padding: 10px;
+}
+
+.Mainsidenav .left-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.Mainsidenav .left-icons div {
+    margin-bottom: 20px;
+}
+
+.Mainsidenav img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    left: 40px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ccc;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #fff;
+    background-color: #222;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+
+    </style>
 </body>
 </html>

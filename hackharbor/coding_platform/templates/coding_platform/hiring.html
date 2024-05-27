@@ -17,6 +17,11 @@
     <div class="Mainsidenav">
         <header>
             <div class="left-icons">
+                <div class="home-icon">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'images/home.jpg' %}" alt="Home icon">
+                    </a>
+                </div>
                 <div class="notification-icon">
                     <img src="{% static 'images/notification.jpg' %}" alt="Notification Icon">
                 </div>
@@ -27,7 +32,7 @@
                     <img src="{% static 'images/news.png' %}" alt="Messaging Icon">
                 </div>
                 <div class="youtube-icon">
-                    <a href="#">
+                    <a href="{% url 'videos' %}">
                         <img src="{% static 'images/video.png' %}" alt="YouTube Icon">
                     </a>
                 </div>
@@ -35,7 +40,7 @@
         </header>
     </div>
 
-    <!-- Data is taken from data base code 
+    <!-- Data is taken from data base code -->
         <main id="main">
     <h3 style="text-align: center;">Job Openings</h3>
     <div class="job-container">
@@ -43,7 +48,7 @@
         <div class="job-title">{{ job.company }}</div>
         <div class="job-details">
             <div><strong>Company:</strong>{{ job.company }}</div>
-            <div><strong>Salary:</strong>{{ job.salary }}</div>
+            
             <div><strong>Description:</strong>{{ job.description }}</div>
             <div><strong>Job Type:</strong>{{ job.job_type }}</div>
             <a href="{{ job.apply_link }}" class="apply-btn">Apply Now</a>
@@ -51,8 +56,8 @@
         {% endfor %}
     </div>
 </main>
--->
-    <main id="main">
+
+    <!--<main id="main">
         <h3 style="text-align: center;">Job Openings</h3>
         <div class="job-container">
             <div class="job-title">Software Engineer</div>
@@ -68,7 +73,7 @@
 
         </div>
     </main>
-
+-->
     <!-- Side Navigation -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

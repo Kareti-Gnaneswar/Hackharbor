@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/hiring.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
 <body onload="openNav()"> <!-- Call openNav() function when the page is loaded -->
@@ -17,11 +17,6 @@
     <div class="Mainsidenav">
         <header>
             <div class="left-icons">
-                <div class="home-icon">
-                    <a href="{% url 'home' %}">
-                        <img src="{% static 'images/home.jpg' %}" alt="Home icon">
-                    </a>
-                </div>
                 <div class="notification-icon">
                     <img src="{% static 'images/notification.jpg' %}" alt="Notification Icon">
                 </div>
@@ -39,20 +34,23 @@
             </div>
         </header>
     </div>
+    <main id="main">
+        <!-- Your main content goes here -->
+        <h2 style="text-align: center;">Let's innovate, learn, and grow together</h2>
+    
+       <h4 style="text-align: center;">Hack Harbor: A Safe and Supportive Tech Community </h4>
+            <div class="container">
 
-    <!-- Data is taken from data base code -->
-        <main id="main">
-    <h3 style="text-align: center;">contest</h3>
-</main>
+    </main>
 
     <!-- Side Navigation -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="{% url 'career' %}">Career</a>
-        <a href="{% url 'Learning' %}">Learning Path</a>
-        <a href="{% url 'contest' %}">Contest</a>
-        <a href="{% url 'hiring' %}">Hiring</a>
-        <a href="{% url 'Login' %}">Login</a>
+        <a href="{% url 'career' %}">Home</a>
+        <a href="{% url 'Learning' %}">channels</a>
+        <a href="{% url 'contest' %}">videos</a>
+        <a href="{% url 'hiring' %}">shorts</a>
+        <a href="{% url 'Login' %}">News</a>
     </div>
 
     <!-- Additional scripts or backend logic can be included as needed -->

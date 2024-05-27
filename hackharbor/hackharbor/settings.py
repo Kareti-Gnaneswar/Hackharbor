@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'coding_platform'
+    'coding_platform',
+    'videos',
 ]
 
 MIDDLEWARE = [
@@ -74,12 +75,25 @@ WSGI_APPLICATION = 'hackharbor.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+#DATABASES = {
+   # 'default': {
+   #     'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': BASE_DIR / 'db.sqlite3',
+    #}
+#}
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'USER_Details',
+        'USER': 'root',
+        'PASSWORD': 'Nani@9390',
+        'HOST': 'localhost',  # Or the hostname of your MySQL server
+        'PORT': '3306',       # MySQL default port
     }
 }
+
 
 
 # Password validation
