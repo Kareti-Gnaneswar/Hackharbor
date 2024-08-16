@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=E:\vikaski\hackharbor\myworld
+set VIRTUAL_ENV=E:\hackharbor main\HackHarbor\myworld
 
 if not defined PROMPT set PROMPT=$P$G
 
